@@ -61,6 +61,7 @@ $mobile: 700px;
       @include Flex();
       gap: 8px;
       border-radius: 8px;
+      cursor: pointer;
     }
   }
 }
