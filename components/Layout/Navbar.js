@@ -12,7 +12,7 @@ import Image from "next/image";
 import { useState } from "react";
 import RightSideBar from "./RightSideBar";
 export default function Navbar() {
-  const isDesktop = useMediaQuery("(min-width: 1050px)");
+  const isDesktop = useMediaQuery("(min-width: 1060px)");
   const isMobile = useMediaQuery("(max-width: 700px)");
   const [openRightSidebar, setOpenRightSidebar] = useState(false);
   const [openLeftSidebar, setOpenLeftSidebar] = useState(false);

@@ -14,12 +14,12 @@
           backdrop-filter: blur(10px);
   max-height: 70px;
 }
-@media (min-width: 700px) and (max-width: 1050px) {
+@media (min-width: 700px) and (max-width: 1060px) {
   .Navbar {
     padding-left: 200px;
   }
 }
-@media (min-width: 1050px) {
+@media (min-width: 1060px) {
   .Navbar {
     justify-content: space-around;
     padding-left: 200px;
@@ -34,6 +34,11 @@
 .Navbar aside a {
   font-weight: 700;
   margin: 0 10px;
+}
+.Navbar aside a:nth-child(5) {
+  background-color: #2769e4;
+  border-radius: 8px;
+  padding: 6px 20px;
 }
 .Navbar aside div {
   padding: 5px;

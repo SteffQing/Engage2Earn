@@ -16,7 +16,7 @@ $transition: all 300ms ease-in-out;
   font-size: 14px;
 }
 $borderRadiusS: 7px;
-$desktop: 1050px;
+$desktop: 1060px;
 $mobile: 700px;
 
 .Navbar {
@@ -43,6 +43,11 @@ $mobile: 700px;
     a {
       font-weight: 700;
       margin: 0 10px;
+      &:nth-child(5) {
+        background-color: #2769e4;
+        border-radius: 8px;
+        padding: 6px 20px;
+      }
     }
     div {
       padding: 5px;
