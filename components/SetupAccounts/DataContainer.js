@@ -20,32 +20,36 @@ export default function DataContainer() {
               </span>
             </div>
             <div>
-              <P content={headers[i]} />
+              <P content="account" />
               <div>
                 <H1 content={value.account} />
                 <P content={value.username} style={{ color: "#4C9BE8" }} />
               </div>
             </div>
             <div>
-              <P content={headers[i + 1]} />
+              <P content="followers" />
               <div>
-                <H1 content={value.followers} />
+                {value.followers ? (
+                  <H1 content={value.followers} />
+                ) : (
+                  <H1 content="NA" style={{ color: "#6d7a86" }} />
+                )}
                 <P content={value.followersInc} />
               </div>
             </div>
             <div>
-              <P content={headers[i + 2]} />
+              <P content="activities (24h)" />
               <H1 content={value.activities} />
             </div>
             <div>
-              <P content={headers[i + 3]} />
+              <P content="authenticity" />
               <div>
                 <H1 content={value.authenticity} />
                 <P content={value.authenticityInc} />
               </div>
             </div>
             <div>
-              <P content={headers[i + 4]} />
+              <P content="actions" />
               {value.bound ? (
                 <span className={styles.bind}>
                   <Close /> Unbind
