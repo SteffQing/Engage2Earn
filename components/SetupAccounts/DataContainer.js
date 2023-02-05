@@ -58,7 +58,7 @@ export default function DataContainer() {
         <main>
           <aside>
             {headers.map((header) => (
-              <div>{header}</div>
+              <div key={header}>{header}</div>
             ))}
           </aside>
           <section>

@@ -58,7 +58,12 @@ export default function Navbar() {
           <Hamburger />
           <Link href="/">
             <a>
-              <Image src="/logo.png" objectFit="contain" layout="fill" />
+              <Image
+                src="/logo.png"
+                objectFit="contain"
+                layout="fill"
+                alt="Logo"
+              />
             </a>
           </Link>
           <div className={styles.viewExpansion}>

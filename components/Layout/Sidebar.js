@@ -11,7 +11,12 @@ export default function Sidebar() {
       <Link href="/">
         <a className={styles.logo}>
           <div className={styles.logoContainer}>
-            <Image src="/logo.png" layout="fill" objectFit="contain" />
+            <Image
+              src="/logo.png"
+              layout="fill"
+              objectFit="contain"
+              alt="Logo"
+            />
           </div>
         </a>
       </Link>
