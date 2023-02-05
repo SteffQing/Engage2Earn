@@ -1,0 +1,125 @@
+.Home {
+  padding: 0 3vw;
+}
+@media (min-width: 700px) {
+  .Home {
+    padding-left: 200px;
+  }
+}
+
+.Index .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (max-width: 700px) {
+  .Index .header {
+    flex-direction: column;
+    width: 100%;
+  }
+  .Index .header div {
+    width: min(300px, 100%);
+  }
+}
+.Index .header div {
+  background-color: #1f3e85;
+  padding: 12px 20px 12px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.DataContainer {
+  position: relative;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
+}
+.DataContainer aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid #0d0d1e;
+  width: min(500px, 100%);
+  margin: auto;
+  gap: 4px;
+  padding: 10px 0;
+}
+.DataContainer aside div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+.DataContainer aside div p {
+  color: #6d7a86;
+}
+.DataContainer aside div span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.DataContainer aside div span:nth-child(2) {
+  color: #e35561;
+}
+.DataContainer aside div div {
+  flex-direction: column;
+  width: auto;
+}
+.DataContainer aside div div p {
+  width: 100%;
+  text-align: end;
+  color: #34d399;
+}
+.DataContainer main {
+  width: 100%;
+}
+.DataContainer main aside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  white-space: nowrap;
+  background-color: #1a1c22;
+  border-radius: 7px;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.DataContainer main aside div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.DataContainer main section aside {
+  background-color: transparent;
+  font-size: 14px;
+}
+.DataContainer main section aside h1 {
+  font-size: 12px;
+}
+.DataContainer main section aside p {
+  font-size: 10px;
+}
+.DataContainer main section aside div {
+  justify-content: center;
+}
+.DataContainer main section aside div span:nth-child(1) {
+  color: #e35561;
+}
+.DataContainer .bind {
+  cursor: pointer;
+}/*# sourceMappingURL=Setup.module.css.map */
