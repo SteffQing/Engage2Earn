@@ -77,6 +77,28 @@ $mobile: 700px;
       height: 50px;
       width: 100px;
     }
+    a,
+    span {
+      z-index: 9;
+    }
+    .viewSidebar {
+      div {
+        backdrop-filter: blur(10px);
+        background-color: $elementBG;
+        .linksAside {
+          transition: $transition;
+          div {
+            transition: $transition;
+          }
+          &:hover {
+            background: rgba(32, 36, 39, 0.7);
+            div {
+              background: rgba(32, 36, 39, 0.7);
+            }
+          }
+        }
+      }
+    }
   }
   .viewExpansion {
     @include Flex();
@@ -147,7 +169,7 @@ $mobile: 700px;
   }
 }
 .Sidebar {
-  z-index: 6;
+  z-index: 7;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

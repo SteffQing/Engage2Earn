@@ -12,6 +12,8 @@ import Image from "next/image";
 import { useState } from "react";
 import RightSideBar from "./RightSideBar";
 import Dot from "../../Icons/Dot";
+import Close from "../../Icons/Bind/Close";
+import Sidebar from "./Sidebar";
 export default function Navbar() {
   const isDesktop = useMediaQuery("(min-width: 1100px)");
   const isMobile = useMediaQuery("(max-width: 700px)");
@@ -59,7 +61,9 @@ export default function Navbar() {
         </>
       ) : isMobile ? (
         <div className={styles.mobile}>
-          <Hamburger />
+          <span onClick={() => setOpenLeftSidebar(!openLeftSidebar)}>
+            {openLeftSidebar ? <Close /> : <Hamburger />}
+          </span>
           <Link href="/">
             <a>
               <Image
@@ -79,6 +83,9 @@ export default function Navbar() {
             <div className={styles.rightSideBar}>
               {openRightSidebar ? <RightSideBar links={navLinks} /> : null}
             </div>
+          </div>
+          <div className={styles.viewSidebar}>
+            {openLeftSidebar ? <Sidebar /> : null}
           </div>
         </div>
       ) : (

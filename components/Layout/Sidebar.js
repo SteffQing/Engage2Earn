@@ -5,21 +5,27 @@ import Portal from "../../Icons/Portal";
 import Participation from "../../Icons/Participation";
 import Link from "next/link";
 import P from "../ElementsTag/PTag";
+import useMediaQuery from "../../hooks/useMediaQueryhooks";
 export default function Sidebar() {
+  const isMobile = useMediaQuery("(max-width: 700px)");
   return (
     <div className={styles.Sidebar}>
-      <Link href="/">
-        <a className={styles.logo}>
-          <div className={styles.logoContainer}>
-            <Image
-              src="/logo.png"
-              layout="fill"
-              objectFit="contain"
-              alt="Logo"
-            />
-          </div>
-        </a>
-      </Link>
+      {!isMobile ? (
+        <Link href="/">
+          <a className={styles.logo}>
+            <div className={styles.logoContainer}>
+              <Image
+                src="/logo.png"
+                layout="fill"
+                objectFit="contain"
+                alt="Logo"
+              />
+            </div>
+          </a>
+        </Link>
+      ) : (
+        <div className={styles.logo}></div>
+      )}
       <div className={styles.links}>
         {links.map((link) => (
           <Link href={link.link} key={link.link}>

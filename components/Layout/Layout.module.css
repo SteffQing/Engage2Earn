@@ -74,6 +74,27 @@
   height: 50px;
   width: 100px;
 }
+.Navbar .mobile a,
+.Navbar .mobile span {
+  z-index: 9;
+}
+.Navbar .mobile .viewSidebar div {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: #191a1f;
+}
+.Navbar .mobile .viewSidebar div .linksAside {
+  transition: all 300ms ease-in-out;
+}
+.Navbar .mobile .viewSidebar div .linksAside div {
+  transition: all 300ms ease-in-out;
+}
+.Navbar .mobile .viewSidebar div .linksAside:hover {
+  background: rgba(32, 36, 39, 0.7);
+}
+.Navbar .mobile .viewSidebar div .linksAside:hover div {
+  background: rgba(32, 36, 39, 0.7);
+}
 .Navbar .viewExpansion {
   display: flex;
   justify-content: center;
@@ -147,7 +168,7 @@
 }
 
 .Sidebar {
-  z-index: 6;
+  z-index: 7;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
