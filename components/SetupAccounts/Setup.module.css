@@ -7,6 +7,9 @@
   }
 }
 
+.Index {
+  margin: 10px 0;
+}
 .Index .header {
   display: flex;
   justify-content: center;

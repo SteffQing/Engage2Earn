@@ -6,6 +6,7 @@ import Facebook from "../../Icons/Facebook";
 import styles from "./Setup.module.css";
 import useMediaQuery from "../../hooks/useMediaQueryhooks";
 import P from "../ElementsTag/PTag";
+import Link from "next/link";
 export default function DataContainer() {
   const isMobile = useMediaQuery("(max-width: 700px)");
   return (
@@ -23,7 +24,11 @@ export default function DataContainer() {
               <P content="account" />
               <div>
                 <H1 content={value.account} />
-                <P content={value.username} style={{ color: "#4C9BE8" }} />
+                <Link href={`https://twitter.com/${value.username}`}>
+                  <a>
+                    <P content={value.username} style={{ color: "#4C9BE8" }} />
+                  </a>
+                </Link>
               </div>
             </div>
             <div>
@@ -80,7 +85,14 @@ export default function DataContainer() {
                 <div>
                   <div>
                     <H1 content={value.account} />
-                    <P content={value.username} style={{ color: "#4C9BE8" }} />
+                    <Link href={`https://twitter.com/${value.username}`}>
+                      <a>
+                        <P
+                          content={value.username}
+                          style={{ color: "#4C9BE8" }}
+                        />
+                      </a>
+                    </Link>
                   </div>
                 </div>
                 <div>

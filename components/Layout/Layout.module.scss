@@ -42,11 +42,15 @@ $mobile: 700px;
     gap: 5px;
     a {
       font-weight: 700;
+      position: relative;
       margin: 0 10px;
       &:nth-child(5) {
         background-color: #2769e4;
         border-radius: 8px;
         padding: 6px 20px;
+      }
+      svg {
+        position: absolute;
       }
     }
     div {

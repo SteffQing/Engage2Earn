@@ -44,6 +44,7 @@ $mobile: 700px;
 }
 
 .Index {
+  margin: 10px 0;
   .header {
     @include Flex();
     justify-content: space-between;

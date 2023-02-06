@@ -33,12 +33,16 @@
 }
 .Navbar aside a {
   font-weight: 700;
+  position: relative;
   margin: 0 10px;
 }
 .Navbar aside a:nth-child(5) {
   background-color: #2769e4;
   border-radius: 8px;
   padding: 6px 20px;
+}
+.Navbar aside a svg {
+  position: absolute;
 }
 .Navbar aside div {
   padding: 5px;

@@ -11,6 +11,7 @@ import useMediaQuery from "../../hooks/useMediaQueryhooks";
 import Image from "next/image";
 import { useState } from "react";
 import RightSideBar from "./RightSideBar";
+import Dot from "../../Icons/Dot";
 export default function Navbar() {
   const isDesktop = useMediaQuery("(min-width: 1060px)");
   const isMobile = useMediaQuery("(max-width: 700px)");
@@ -45,9 +46,12 @@ export default function Navbar() {
       {isDesktop ? (
         <>
           <aside>
-            {navLinks.map((navLink) => (
+            {navLinks.map((navLink, i) => (
               <Link href={navLink} key={navLink}>
-                <a>{navLink}</a>
+                <a>
+                  {navLink}
+                  {i === 1 ? <Dot /> : null}
+                </a>
               </Link>
             ))}
           </aside>
