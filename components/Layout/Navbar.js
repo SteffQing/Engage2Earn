@@ -121,7 +121,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className={styles.viewSidebar}>
-            {openLeftSidebar ? <Sidebar /> : null}
+            {openLeftSidebar ? <Sidebar setBar={setOpenLeftSidebar} /> : null}
           </div>
         </div>
       ) : (

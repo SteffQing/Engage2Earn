@@ -66,8 +66,11 @@
   padding: 10px 0;
   text-transform: capitalize;
 }
-.DataContainer aside div p {
+.DataContainer aside div > h1 {
   color: #6d7a86;
+}
+.DataContainer aside div > h1:nth-child(2) {
+  color: #fff;
 }
 .DataContainer aside div span {
   display: flex;
@@ -82,7 +85,12 @@
   flex-direction: column;
   width: auto;
 }
-.DataContainer aside div div p {
+.DataContainer aside div div h1 {
+  color: #fff;
+}
+.DataContainer aside div div p,
+.DataContainer aside div div a {
+  font-size: 12px;
   width: 100%;
   text-align: end;
   color: #34d399;
@@ -100,26 +108,30 @@
   background-color: #1a1c22;
   border-radius: 7px;
   padding: 12px;
-  text-transform: uppercase;
   font-size: 12px;
 }
 .DataContainer main aside div {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 .DataContainer main section aside {
   background-color: transparent;
   font-size: 14px;
 }
 .DataContainer main section aside h1 {
-  font-size: 12px;
+  font-size: 14px;
+  color: #fff;
 }
 .DataContainer main section aside p {
   font-size: 10px;
 }
 .DataContainer main section aside div {
   justify-content: center;
+  text-transform: capitalize;
+  font-size: 14px;
 }
 .DataContainer main section aside div span:nth-child(1) {
   color: #e35561;

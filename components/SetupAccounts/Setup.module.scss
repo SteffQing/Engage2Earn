@@ -86,9 +86,13 @@ $mobile: 700px;
       width: 100%;
       padding: 10px 0;
       text-transform: capitalize;
-      p {
+      & > h1 {
         color: #6d7a86;
+        &:nth-child(2) {
+          color: #fff;
+        }
       }
+
       span {
         @include Flex();
         gap: 5px;
@@ -99,7 +103,12 @@ $mobile: 700px;
       div {
         flex-direction: column;
         width: auto;
-        p {
+        h1 {
+          color: #fff;
+        }
+        p,
+        a {
+          font-size: 12px;
           width: 100%;
           text-align: end;
           color: #34d399;
@@ -117,10 +126,11 @@ $mobile: 700px;
       background-color: #1a1c22;
       border-radius: $borderRadiusS;
       padding: 12px;
-      text-transform: uppercase;
       font-size: 12px;
       div {
         @include Flex();
+        text-transform: uppercase;
+        font-size: 12px;
       }
     }
     section {
@@ -128,13 +138,16 @@ $mobile: 700px;
         background-color: transparent;
         font-size: 14px;
         h1 {
-          font-size: 12px;
+          font-size: 14px;
+          color: #fff;
         }
         p {
           font-size: 10px;
         }
         div {
           justify-content: center;
+          text-transform: capitalize;
+          font-size: 14px;
           span {
             &:nth-child(1) {
               color: #e35561;

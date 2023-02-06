@@ -21,7 +21,7 @@ export default function DataContainer() {
               </span>
             </div>
             <div>
-              <P content="account" />
+              <H1 content="account" />
               <div>
                 <H1 content={value.account} />
                 <Link href={`https://twitter.com/${value.username}`}>
@@ -32,7 +32,7 @@ export default function DataContainer() {
               </div>
             </div>
             <div>
-              <P content="followers" />
+              <H1 content="followers" />
               <div>
                 {value.followers ? (
                   <H1 content={value.followers} />
@@ -43,18 +43,18 @@ export default function DataContainer() {
               </div>
             </div>
             <div>
-              <P content="activities (24h)" />
+              <H1 content="activities (24h)" />
               <H1 content={value.activities} />
             </div>
             <div>
-              <P content="authenticity" />
+              <H1 content="authenticity" />
               <div>
                 <H1 content={value.authenticity} />
                 <P content={value.authenticityInc} />
               </div>
             </div>
             <div>
-              <P content="actions" />
+              <H1 content="actions" />
               {value.bound ? (
                 <span className={styles.bind}>
                   <Close /> Unbind
