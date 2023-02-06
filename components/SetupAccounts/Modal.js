@@ -8,11 +8,28 @@ import Facebook from "../../Icons/Bind/Facebook";
 import Telegram from "../../Icons/Bind/Telegram";
 import Instagram from "../../Icons/Bind/Instagram";
 import GoTo from "../../Icons/GoTo";
+import { useEffect, useRef } from "react";
 
 export default function Modal({ setModal }) {
+  let menuRef = useRef();
+  useEffect(() => {
+    let handler = (e) => {
+      try {
+        if (!menuRef.current.contains(e.target)) {
+          setModal(false);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
   return (
     <div className={styles.Modal}>
-      <div className={styles.modal}>
+      <div className={styles.modal} ref={menuRef}>
         <aside>
           <div>
             <H1 content="Bind New Account" />

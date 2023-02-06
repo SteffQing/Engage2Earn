@@ -38,6 +38,9 @@
 }
 .Navbar aside a:nth-child(5) {
   background-color: #2769e4;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 8px;
   padding: 6px 20px;
 }
@@ -74,8 +77,7 @@
   height: 50px;
   width: 100px;
 }
-.Navbar .mobile a,
-.Navbar .mobile span {
+.Navbar .mobile > a, .Navbar .mobile > span {
   z-index: 9;
 }
 .Navbar .mobile .viewSidebar div {

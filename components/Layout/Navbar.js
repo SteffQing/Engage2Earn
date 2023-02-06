@@ -9,7 +9,7 @@ import ExpandAccount from "./ExpandAccount";
 import Link from "next/link";
 import useMediaQuery from "../../hooks/useMediaQueryhooks";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import RightSideBar from "./RightSideBar";
 import Dot from "../../Icons/Dot";
 import Close from "../../Icons/Bind/Close";
@@ -43,6 +43,38 @@ export default function Navbar() {
       <ArrowDown />
     </span>
   );
+  let exRef = useRef();
+  useEffect(() => {
+    let handler = (e) => {
+      try {
+        if (!exRef.current.contains(e.target)) {
+          setOpenAccount(false);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+  let sideBar = useRef();
+  useEffect(() => {
+    let handler = (e) => {
+      try {
+        if (!sideBar.current.contains(e.target)) {
+          setOpenRightSidebar(false);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
   return (
     <nav className={styles.Navbar}>
       {isDesktop ? (
@@ -77,11 +109,15 @@ export default function Navbar() {
           <div className={styles.viewExpansion}>
             {expandAccounts}
             <div className={styles.expandAccounts}>
-              {openAccount ? <ExpandAccount accounts={wallets} /> : null}
+              {openAccount ? (
+                <ExpandAccount accounts={wallets} exRef={exRef} />
+              ) : null}
             </div>
             <More onClick={() => setOpenRightSidebar(!openRightSidebar)} />
             <div className={styles.rightSideBar}>
-              {openRightSidebar ? <RightSideBar links={navLinks} /> : null}
+              {openRightSidebar ? (
+                <RightSideBar links={navLinks} barRef={sideBar} />
+              ) : null}
             </div>
           </div>
           <div className={styles.viewSidebar}>
@@ -94,7 +130,9 @@ export default function Navbar() {
             {wallets}
             <More onClick={() => setOpenRightSidebar(!openRightSidebar)} />
             <div className={styles.rightSideBar}>
-              {openRightSidebar ? <RightSideBar links={navLinks} /> : null}
+              {openRightSidebar ? (
+                <RightSideBar links={navLinks} barRef={sideBar} />
+              ) : null}
             </div>
           </div>
         </>
