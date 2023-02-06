@@ -14,12 +14,12 @@
           backdrop-filter: blur(10px);
   max-height: 70px;
 }
-@media (min-width: 700px) and (max-width: 1060px) {
+@media (min-width: 700px) and (max-width: 1100px) {
   .Navbar {
     padding-left: 200px;
   }
 }
-@media (min-width: 1060px) {
+@media (min-width: 1100px) {
   .Navbar {
     justify-content: space-around;
     padding-left: 200px;

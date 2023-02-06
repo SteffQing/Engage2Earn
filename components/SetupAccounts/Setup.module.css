@@ -126,4 +126,116 @@
 }
 .DataContainer .bind {
   cursor: pointer;
+}
+
+.Modal {
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 0 10px;
+}
+.Modal::-webkit-scrollbar {
+  width: 3px;
+  display: block;
+}
+.Modal::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #000000;
+}
+.Modal::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: transparent;
+}
+.Modal:hover::-webkit-scrollbar-thumb {
+  background-color: #b8b8b8;
+}
+.Modal .modal {
+  background-color: #1a1c22;
+  width: min(400px, 100%);
+  padding: 24px;
+  position: absolute;
+  top: 50px;
+  border-radius: 12px;
+}
+.Modal .modal aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(33, 34, 40);
+}
+.Modal .modal aside div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.Modal .modal aside div h1 {
+  font-size: 16px;
+}
+.Modal .modal aside p {
+  color: #6d7a86;
+  width: 100%;
+  text-align: left;
+}
+.Modal .modal section {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.Modal .modal section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  background: #292b33;
+  border-radius: 12px;
+  padding: 16px;
+}
+.Modal .modal section div aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+  flex-direction: row;
+  text-transform: capitalize;
+  border-bottom: none;
+}
+.Modal .modal section div aside h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
+}
+.Modal .modal section div span {
+  background: #1a1c22;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #ffbc00;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: 12px;
 }/*# sourceMappingURL=Setup.module.css.map */

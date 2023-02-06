@@ -13,7 +13,7 @@ import { useState } from "react";
 import RightSideBar from "./RightSideBar";
 import Dot from "../../Icons/Dot";
 export default function Navbar() {
-  const isDesktop = useMediaQuery("(min-width: 1060px)");
+  const isDesktop = useMediaQuery("(min-width: 1100px)");
   const isMobile = useMediaQuery("(max-width: 700px)");
   const [openRightSidebar, setOpenRightSidebar] = useState(false);
   const [openLeftSidebar, setOpenLeftSidebar] = useState(false);
